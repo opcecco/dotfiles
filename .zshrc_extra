@@ -8,3 +8,5 @@ export VISUAL=vim
 
 alias 'mkdir'='mkdir -p'
 alias 'c'='clear'
+
+alias 'ilikethistheme'='echo $RANDOM_THEME >> ~/Documents/liked_themes.txt'
