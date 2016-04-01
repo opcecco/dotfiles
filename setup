@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ -z $(which zsh) ]; then
+	echo "Please first install Zsh"
+	exit
+fi
+echo "Zsh is installed!"
+
+if [ ! -d $HOME/.oh-my-zsh ]; then
+	echo "Please install Oh My Zsh"
+	exit
+fi
+echo "Oh My Zsh is installed!"
+
+echo "Setting up symlinks"
+ln -f -s $PWD/.vimrc $HOME/.vimrc
+ln -f -s $PWD/.zshrc_extra $HOME/.zshrc_extra
+
+echo "source $HOME/.zshrc_extra" >> $HOME/.zshrc
+echo "Done!"
