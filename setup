@@ -16,5 +16,8 @@ echo "Setting up symlinks"
 ln -f -s $PWD/.vimrc $HOME/.vimrc
 ln -f -s $PWD/.zshrc_extra $HOME/.zshrc_extra
 
-echo "source $HOME/.zshrc_extra" >> $HOME/.zshrc
+if ! grep -q "zshrc_extra" $HOME/.zshrc; then
+	echo "Sourcing custom Zsh config in your zshrc"
+	echo "source $HOME/.zshrc_extra" >> $HOME/.zshrc
+fi
 echo "Done!"
