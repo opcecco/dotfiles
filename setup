@@ -15,6 +15,9 @@ echo "Oh My Zsh is installed!"
 echo "Setting up symlinks"
 ln -f -s $PWD/.vimrc $HOME/.vimrc
 ln -f -s $PWD/.zshrc_extra $HOME/.zshrc_extra
+ln -f -s $PWD/.rtorrent.rc $HOME/.rtorrent.rc
+
+mkdir -p $HOME/.config/rtorrent/session
 
 if ! grep -q "zshrc_extra" $HOME/.zshrc; then
 	echo "Sourcing custom Zsh config in your zshrc"
