@@ -1,4 +1,4 @@
-setopt globdots
+setopt correct
 unsetopt nomatch
 
 export LC_ALL=en_US.UTF-8
