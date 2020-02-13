@@ -9,6 +9,9 @@ export VISUAL=vim
 alias 'mkdir'='mkdir -p'
 alias 'c'='clear'
 alias 'x'='exit'
+alias 'please'='sudo'
+alias 'pls'='sudo'
+alias 'plz'='sudo'
 
 alias 'ilikethistheme'='echo $RANDOM_THEME >> ~/liked_themes.txt'
 
