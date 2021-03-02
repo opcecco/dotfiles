@@ -28,3 +28,6 @@ function _venv_auto_activate() {
 
 # chpwd_functions+=(_venv_auto_activate)
 # precmd_functions=(_venv_auto_activate "$precmd_functions")
+
+# For WSL
+alias 'explorer'='explorer.exe $(wslpath -w "$PWD")'
