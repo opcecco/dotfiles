@@ -11,6 +11,7 @@ export VISUAL=vim
 alias 'mkdir'='mkdir -p'
 alias 'c'='clear'
 alias 'x'='exit'
+
 alias 'please'='sudo'
 alias 'pls'='sudo'
 alias 'plz'='sudo'
@@ -30,4 +31,7 @@ function _venv_auto_activate() {
 # precmd_functions=(_venv_auto_activate "$precmd_functions")
 
 # For WSL
-alias 'explorer'='explorer.exe $(wslpath -w "$PWD")'
+if [[ $(grep Microsoft /proc/version) ]]; then
+	alias 'explorer'='explorer.exe $(wslpath -w "$PWD")'
+	alias 'neofetch'='neofetch --ascii_distro Windows'
+fi
