@@ -31,7 +31,7 @@ function _venv_auto_activate() {
 # precmd_functions=(_venv_auto_activate "$precmd_functions")
 
 # For WSL
-if [[ $(grep Microsoft /proc/version) ]]; then
+if [[ $(grep -i microsoft /proc/version) ]]; then
 	alias 'explorer'='explorer.exe $(wslpath -w "$PWD")'
 	alias 'neofetch'='neofetch --ascii_distro Windows'
 fi
